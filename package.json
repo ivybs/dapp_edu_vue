@@ -12,7 +12,7 @@
   "dependencies": {
     "element-ui": "^2.14.1",
     "tiptap": "^1.30.0",
-    "vue": "^2.5.2"
+    "vue": "^2.6.12"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
@@ -34,7 +34,7 @@
     "node-notifier": "^5.1.2",
     "optimize-css-assets-webpack-plugin": "^3.2.0",
     "ora": "^1.2.0",
-    "portfinder": "^1.0.13",
+    "portfinder": "^1.0.28",
     "postcss-import": "^11.0.0",
     "postcss-loader": "^2.0.8",
     "postcss-url": "^7.2.1",
@@ -46,7 +46,7 @@
     "vue-loader": "^13.3.0",
     "vue-router": "^3.4.9",
     "vue-style-loader": "^3.0.1",
-    "vue-template-compiler": "^2.5.2",
+    "vue-template-compiler": "^2.6.12",
     "webpack": "^3.6.0",
     "webpack-bundle-analyzer": "^2.9.0",
     "webpack-dev-server": "^2.9.1",
