@@ -1,17 +1,52 @@
 <template>
     <el-row class="tac">   
         <el-col :span="200">    
-            <el-menu default-active="2" class="el-menu-vertical-demo" @open="handleOpen" @close="handleClose" :router="true" :unique-opened="true">
-                <!-- <el-menu-item index="1">
-                    <i class="el-icon-menu"></i>
-                    <span slot="title">编辑与上传</span>
-                </el-menu-item> -->
-                 <el-submenu index="1">
+            <el-menu default-active="2" class="el-menu-vertical-demo" 
+            @open="handleOpen"
+            @close="handleClose" 
+            :router="true" 
+            :unique-opened="true">
+                 <el-submenu index="1">  
                     <template slot="title">
                         <i class="el-icon-location"></i>
                         <span slot="title">编辑与上传</span>
                     </template>
-
+                    <el-menu-item index="eduList">
+                        <i class="el-icon-circle-check"></i>
+                        <span>资源列表</span>
+                    </el-menu-item>
+                    <el-menu-item index="editor">
+                        <i class="el-icon-circle-check"></i>
+                        <span>在线编辑</span>
+                    </el-menu-item>
+                </el-submenu>
+                <el-submenu index="2">
+                    <template slot="title">
+                        <i class="el-icon-location"></i>
+                        <span slot="title">学业信息认证</span>
+                    </template>
+                    <el-menu-item index="applyCerti">
+                        <i class="el-icon-circle-check"></i>
+                        <span>学业认证申请</span>
+                    </el-menu-item>
+                    <el-menu-item index="exportCerti">
+                        <i class="el-icon-circle-check"></i>
+                        <span>学业信息查看和导出</span>
+                    </el-menu-item>
+                </el-submenu>
+                    <el-submenu index="3">
+                    <template slot="title">
+                        <i class="el-icon-location"></i>
+                        <span slot="title">个人信息与账户</span>
+                    </template>
+                    <el-menu-item index="userInfo">
+                        <i class="el-icon-circle-check"></i>
+                        <span>个人信息</span>
+                    </el-menu-item>
+                    <el-menu-item index="walletInfo">
+                        <i class="el-icon-circle-check"></i>
+                        <span>账户信息</span>
+                    </el-menu-item>
                 </el-submenu>
             </el-menu>
     
@@ -54,7 +89,7 @@ export default {
 </script>
 <style>
   .el-menu-vertical-demo:not(.el-menu--collapse) {
-    width: 200px;
+    width: 219px;
     min-height: 400px;
   }
 </style>

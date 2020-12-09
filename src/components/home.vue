@@ -1,8 +1,8 @@
 <template>
  <el-container >
-  <el-header>Header</el-header>
+  <el-header><h1>基于区块链的在线教育平台</h1></el-header>
   <el-container>
-    <el-aside width="200px">
+    <el-aside width="220px">
       <nav-menu></nav-menu>
     </el-aside>
     <el-main>
@@ -43,20 +43,12 @@ activated() {} //如果页面有keep-alive缓存功能，这个函数会触发
 }
 </script>
 <style>
-.el-col{
-  width: 200px;
-  
-}
 #app{
     height: 100%;
     margin: 0px;
     padding: 0px;
 }
-html, body {
-    height: 100%;
-    margin: 0px;
-    padding: 0px;
-}
+
 .el-container.is-vertical{
   height: 100%;
 
@@ -65,21 +57,14 @@ html, body {
     background-color: #B3C0D1;
     color: #333;
     text-align: center;
-    line-height: 100px;
+    line-height: 20px;
   }
   
-  /* .el-aside {
-    background-color: #D3DCE6;
-    color: #333;
-    text-align: center;
-    line-height: 200px;
-  } */
   
   .el-main {
     background-color: #E9EEF3;
     color: #333;
-    text-align: center;
-    line-height: 160px;
+    height: 100%;
   }
   
 
