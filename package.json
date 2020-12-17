@@ -10,7 +10,12 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "@babel/runtime": "^7.12.5",
+    "@scatterjs/core": "^2.7.54",
+    "@scatterjs/eosjs": "^1.5.37",
     "element-ui": "^2.14.1",
+    "eosjs": "^16.0.9",
+    "ipfs-http-client": "^48.1.3",
     "sass": "^1.30.0",
     "sass-loader": "^10.1.0",
     "vue": "^2.6.12",
