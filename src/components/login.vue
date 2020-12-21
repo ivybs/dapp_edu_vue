@@ -1,5 +1,5 @@
 <template>
-    <div class="login-wrap">
+    <div class="login-wrap" v-loading="loading">
         
         <el-form class="login-form" label-position="left" label-width="80px" :model="format">
             <h1>用户登录</h1>
@@ -30,12 +30,9 @@ export default {
 components: {},
 data() {
 return {
-    format:{
-        username: 111,
-        password: 111
-    },
-    loginMessage:null
-
+    loginMessage:null,
+    loading:true,
+    accountName:null,
 };
 },
 //方法集合
@@ -55,20 +52,29 @@ created() {
 mounted() {
     ScatterJS.connect('eduDapp', {network}).then(connected => {
     if(!connected) {
-        this.loginMessage = "未检测到本地安装的scatter"
+        this.loginMessage = "未检测到本地安装的scatter";
+        this.loading = false;
         return console.error('no scatter');
     }
     const eos = ScatterJS.eos(network, Eos);
     ScatterJS.login().then(id => {
         if(!id){
-            this.loginMessage = "登录失败"
+            this.loginMessage = "登录失败" + this.accountName;
+            this.loading = false;
             return console.error('no identity');
         }else{
-            this.loginMessage = "登录成功"
+            this.loginMessage = "登录成功";
+            this.loading = false;
+            setTimeout(() => {
+                this.$router.push("/home")
+            }, 2000);
         } 
         const account = ScatterJS.account('eos');
         const options = {authorization:[`${account.name}@${account.authority}`]};
+        this.accountName = options;
         console.log(options);
+
+        // 转账
         // eos.transfer(account.name, 'safetransfer', '0.0001 EOS', account.name, options).then(res => {
         //     console.log('sent: ', res);
         // }).catch(err => {
